@@ -4,12 +4,6 @@ from store_sales.entity.config_entity import ModelTrainerTIMEConfig
 from store_sales.entity.artifact_entity import DataTransformationArtifact
 from store_sales.entity.artifact_entity import ModelTrainerArtifact,ModelTrainerTIMEArtifact
 from store_sales.constant import *
-from store_sales.constant.training_pipeline.data_ingestion import *
-from store_sales.constant.training_pipeline.data_validation import *
-from store_sales.constant.training_pipeline.data_transformation import *
-from store_sales.constant.training_pipeline.model_trainer_time import *
-from store_sales.constant.training_pipeline.Model_trainer import *
-from store_sales.constant.training_pipeline import *
 import sys
 import os
 from store_sales.logger import logging
@@ -89,7 +83,7 @@ class SarimaModelTrainer:
 
         data = df[target_column]
       # exog = df[exog_columns] 
-        exog=df['oil_price'] 
+        exog=df[['oil_price']] 
         
         logging.info(" Starting auto arima ......")
   
@@ -455,8 +449,7 @@ class ModelTrainer_time:
             # Calculate the mean of 'oil_price' within each date group
             df_gp['oil_price'] = df.groupby('date')['oil_price'].mean()
             
-            df_gp.to_csv('grouped_data_file_path')
-            exog_columns = df_gp['oil_price'].values.reshape(-1, 1)
+            df_gp.to_csv(grouped_data_file_path)
         
          
             # Training SARIMA MODEL 
@@ -466,7 +459,7 @@ class ModelTrainer_time:
             logging.info("Starting SARIMA Model Training")
             sarima_model=SarimaModelTrainer(
                                             target_column=self.target_column,
-                                           exog_columns=exog_columns,
+                                           exog_columns=self.exog_columns,
                                             image_directory=self.image_directory)
             mse_Sarima,Sarima_exog_model,plot_image_path_sarima=sarima_model.train_model(df_gp)
             

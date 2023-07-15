@@ -122,7 +122,7 @@ class Model_eval_and_Pusher:
                 logging.info("Artifact Model saved.")
                 
                 # Plot image save
-                destination_path=os.path.join(self.model_trainer_artifact.saved_model_file_path,'best_model_prediction')
+                destination_path=os.path.join(self.model_trainer_artifact.saved_model_file_path,'best_model_prediction.png')
                 copy_image(source_path=plot_artifact_path,destination_path=destination_path)
                 
             else:

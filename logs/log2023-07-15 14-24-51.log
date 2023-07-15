@@ -1,0 +1,168 @@
+[2023-07-15 14:24:52,700] numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[2023-07-15 14:24:59,826] root - INFO - Training pipleine config: TrainingPipelineConfig(artifact_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact')
+[2023-07-15 14:24:59,828] root - INFO - Data Ingestion Config : DataIngestionConfig(dataset_download_url='https://github.com/sumeet0701/data-dump/blob/main/outlier_clean.zip?raw=true', tgz_download_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_ingestion\\2023-07-15-14-24-51\\tgz_data', raw_data_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_ingestion\\2023-07-15-14-24-51\\raw_data', ingested_data_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_ingestion\\2023-07-15-14-24-51\\ingested_data') 
+[2023-07-15 14:24:59,828] root - INFO - 
+******************** Data Ingestion log started ********************
+
+[2023-07-15 14:24:59,840] root - INFO - Connection with DB created successfully!!!
+[2023-07-15 14:24:59,843] root - INFO - Downloading file from: [https://github.com/sumeet0701/data-dump/blob/main/outlier_clean.zip?raw=true] into : [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\Sales_Forecasting_Artifact\Artifact\data_ingestion\2023-07-15-14-24-51\tgz_data\store_sales.zip]
+[2023-07-15 14:25:48,498] root - INFO - File: [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\Sales_Forecasting_Artifact\Artifact\data_ingestion\2023-07-15-14-24-51\tgz_data\store_sales.zip] has been downloaded successfully
+[2023-07-15 14:25:48,499] root - INFO - Extracting zipped file : [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\Sales_Forecasting_Artifact\Artifact\data_ingestion\2023-07-15-14-24-51\tgz_data\store_sales.zip] into dir: [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\Sales_Forecasting_Artifact\Artifact\data_ingestion\2023-07-15-14-24-51\raw_data]
+[2023-07-15 14:25:49,804] root - INFO - Extraction completed successfully
+[2023-07-15 14:26:43,183] root - INFO - Inserting file: [outlier_clean.csv] into DB
+[2023-07-15 14:26:43,183] root - INFO - Fetching entire data from DB
+[2023-07-15 14:26:43,183] root - INFO - Entire data fetched successfully from DB!!!
+[2023-07-15 14:26:43,183] root - INFO - Splitting Dataset into train and test
+[2023-07-15 14:26:43,184] root - INFO - Index(['date', 'store_nbr', 'family', 'sales', 'onpromotion', 'holiday_type',
+       'locale', 'locale_name', 'description', 'transferred', 'oil_price',
+       'city', 'state', 'store_type', 'cluster', 'transactions', 'year',
+       'month', 'week', 'quarter', 'day_of_week'],
+      dtype='object')
+[2023-07-15 14:26:43,184] root - INFO - Inserting new Training Data into DB
+[2023-07-15 14:26:43,184] root - INFO - Exporting training dataset to file: [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\Sales_Forecasting_Artifact\Artifact\data_ingestion\2023-07-15-14-24-51\ingested_data\outlier_clean.csv]
+[2023-07-15 14:27:05,521] root - INFO - Data Ingestion Artifact: [DataIngestionArtifact(Ingestion_file_path='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_ingestion\\2023-07-15-14-24-51\\ingested_data\\outlier_clean.csv', is_ingested=True, message='Data ingestion completed successfully')]
+[2023-07-15 14:27:06,852] root - INFO - 
+******************** Data Ingestion log completed ********************
+
+[2023-07-15 14:27:06,852] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Validation log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2023-07-15 14:27:06,853] root - INFO - *****************Ingested data validation Started****************
+[2023-07-15 14:27:06,866] root - INFO - Validation Process Started
+[2023-07-15 14:27:06,866] root - INFO - Checking filename
+[2023-07-15 14:27:06,867] root - INFO - Checking check_column_names
+[2023-07-15 14:27:14,341] root - INFO - Checking missing_values_whole_columns
+[2023-07-15 14:27:22,334] root - INFO - Checking replacinig_null_values_with_null
+[2023-07-15 14:27:32,711] root - INFO - replacinig_null_values_with_null is sucessfully
+[2023-07-15 14:27:32,807] root - INFO - Train_set status|is Train filename validated?: True|is train column name validated?: True|whole missing columns?True
+[2023-07-15 14:27:33,175] root - INFO - Exported validated  dataset to file: [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\Sales_Forecasting_Artifact\Artifact\data_validation\2023-07-15-14-24-51\validated_data]
+[2023-07-15 14:27:33,176] root - INFO - Data validation artifact: DataValidationArtifact(schema_file_path='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\config\\schema.yaml', message='Validated', validated_file_path='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_validation\\2023-07-15-14-24-51\\validated_data')
+[2023-07-15 14:27:33,176] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Validation log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2023-07-15 14:27:33,176] root - INFO - Data Transformation Config: DataTransformationConfig(time_series_data_file_path='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_transformation\\2023-07-15-14-24-51\\transformed_data\\time_series_data', feature_engineering_object_file_path='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_transformation\\2023-07-15-14-24-51\\preprocessed\\feat_eng.pkl')
+[2023-07-15 14:27:33,176] root - INFO - 
+******************** Data Transformation log started ********************
+
+
+[2023-07-15 14:27:33,192] root - INFO - Obtaining file from file path 
+[2023-07-15 14:27:33,192] root - INFO - Loading Data as pandas dataframe.
+[2023-07-15 14:27:39,848] root - INFO -  Data columns Index(['date', 'store_nbr', 'family', 'sales', 'onpromotion', 'holiday_type',
+       'locale', 'locale_name', 'description', 'transferred', 'oil_price',
+       'city', 'state', 'store_type', 'cluster', 'transactions', 'year',
+       'month', 'week', 'quarter', 'day_of_week'],
+      dtype='object')
+[2023-07-15 14:27:39,848] root - INFO - Numerical columns: ['store_nbr', 'onpromotion', 'oil_price', 'cluster', 'transactions']
+[2023-07-15 14:27:39,848] root - INFO - Categorical columns: ['family', 'holiday_type', 'locale', 'locale_name', 'description', 'city', 'state', 'store_type', 'transferred']
+[2023-07-15 14:27:39,848] root - INFO - Target Column: ['sales']
+[2023-07-15 14:27:39,849] root - INFO - Date column :['date']
+[2023-07-15 14:27:39,849] root - INFO - All columns: ['store_nbr', 'onpromotion', 'oil_price', 'cluster', 'transactions', 'family', 'holiday_type', 'locale', 'locale_name', 'description', 'city', 'state', 'store_type', 'transferred', 'date', 'sales']
+[2023-07-15 14:27:40,277] root - INFO - Obtaining feature engineering object.
+[2023-07-15 14:27:40,277] root - INFO - 
+******************** Feature Engneering Started ********************
+
+
+[2023-07-15 14:27:40,277] root - INFO -  Numerical Columns , Categorical Columns , Target Column initialised in Feature engineering Pipeline 
+[2023-07-15 14:27:40,277] root - INFO - Applying feature engineering object on training dataframe and testing dataframe
+[2023-07-15 14:27:40,277] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Training data <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2023-07-15 14:27:40,277] root - INFO - Feature Enineering - Train Data 
+[2023-07-15 14:27:40,278] root - INFO - Columns not found: ['year', 'month', 'week', 'quarter', 'day_of_week']
+[2023-07-15 14:27:40,660] root - INFO - Dropping columns for time series analysis ['family', 'locale', 'locale_name', 'description', 'city', 'state', 'cluster', 'transactions', 'transferred', 'store_nbr', 'store_type', 'holiday_type', 'onpromotion']
+[2023-07-15 14:27:40,774] root - INFO -  Oil Price column renamed 
+[2023-07-15 14:27:41,152] root - INFO - Shape before removing duplicates: (3054348, 3)
+[2023-07-15 14:27:41,152] root - INFO - Shape after removing duplicates: (1127250, 3)
+[2023-07-15 14:27:41,152] root - INFO - Count of duplicate values: 1927098
+[2023-07-15 14:27:41,165] root - INFO - No missing values found in the dataframe.
+[2023-07-15 14:27:41,165] root - INFO - 'id' column not found. Skipping dropping operation.
+[2023-07-15 14:27:41,165] root - INFO - Dropping rows with null values...
+[2023-07-15 14:27:41,184] root - INFO - Resetting DataFrame index...
+[2023-07-15 14:27:41,185] root - INFO - Columns dropped, null values removed, and index reset.
+[2023-07-15 14:27:41,185] root - INFO - Removing outliers in column 'oil_price' using IQR method...
+[2023-07-15 14:27:41,208] root - INFO - Number of outliers removed in column 'oil_price': 0
+[2023-07-15 14:27:41,222] root - INFO - Column 'oil_price' modified: 0 outliers modified
+[2023-07-15 14:27:41,223] root - INFO - Columns after modification Index(['oil_price', 'date', 'sales'], dtype='object')
+[2023-07-15 14:27:41,223] root - INFO -  Data Modification Done
+[2023-07-15 14:27:41,223] root - INFO - Column Data Types:
+[2023-07-15 14:27:41,223] root - INFO - Column: 'oil_price': float64
+[2023-07-15 14:27:41,223] root - INFO - Column: 'date': datetime64[ns]
+[2023-07-15 14:27:41,223] root - INFO - Column: 'sales': float64
+[2023-07-15 14:27:41,266] root - INFO - Data Wrangling Done
+[2023-07-15 14:27:41,267] root - INFO - Columns for Feature Engineering : ['store_nbr', 'onpromotion', 'oil_price', 'cluster', 'transactions', 'family', 'holiday_type', 'locale', 'locale_name', 'description', 'city', 'state', 'store_type', 'transferred', 'date', 'sales']
+[2023-07-15 14:27:41,267] root - INFO - Feature Engineering - Train Completed
+[2023-07-15 14:27:41,267] root - INFO - Saving Feature Engineering Object
+[2023-07-15 14:27:56,574] root - INFO - Data Transformation Artifact: DataTransformationArtifact(message='Data transformation successfull.', time_series_data_file_path='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_transformation\\2023-07-15-14-24-51\\transformed_data\\time_series_data\\time_model_file_name.csv', feature_engineering_object_file_path='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_transformation\\2023-07-15-14-24-51\\preprocessed\\feat_eng.pkl')
+[2023-07-15 14:27:56,593] root - INFO - 
+******************** Data Transformation log completed ********************
+
+
+[2023-07-15 14:27:56,593] root - INFO - Model Trainer Config : ModelTrainerConfig(trained_model_file_path='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\model_training\\2023-07-15-14-24-51\\trained_time_model\\model.pkl', time_Series_grouped_data='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\model_training\\2023-07-15-14-24-51\\trained_time_model\\grouped_data.csv', model_report='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\model_training\\2023-07-15-14-24-51\\trained_time_model\\model.yaml', prediction_image='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\model_training\\2023-07-15-14-24-51\\trained_time_model\\prediction.png', best_model_png='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\model_training\\2023-07-15-14-24-51\\trained_time_model', saved_model_file_path='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\saved_models\\model.pkl', saved_report_file_path='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\saved_models\\model.yaml', saved_model_plot='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\saved_models')
+[2023-07-15 14:27:56,593] root - INFO - 
+******************** Model Training started ********************
+
+
+[2023-07-15 14:27:56,596] root - INFO - Finding Feature engineered data 
+[2023-07-15 14:27:56,596] root - INFO - Accessing Feature Trained csv
+[2023-07-15 14:27:57,720] root - INFO -  Columns : Index(['store_nbr', 'onpromotion', 'oil_price', 'cluster', 'transactions',
+       'family', 'holiday_type', 'locale', 'locale_name', 'description',
+       'city', 'state', 'store_type', 'transferred', 'sales'],
+      dtype='object')
+[2023-07-15 14:27:57,865] root - INFO - -----------------------------
+[2023-07-15 14:27:57,866] root - INFO - Starting SARIMA Model Training
+[2023-07-15 14:27:57,866] root - INFO - Model Training Started: SARIMAX with EXOG data
+[2023-07-15 14:27:57,868] root - INFO -  Starting auto arima ......
+[2023-07-15 14:30:00,046] root - INFO - Model trained best Parameters:
+[2023-07-15 14:30:00,047] root - INFO - Order: (2, 1, 2)
+[2023-07-15 14:30:00,047] root - INFO - Seasonal order: (2, 0, 2, 7)
+[2023-07-15 14:30:03,555] root - INFO -  Sarima Model training completed
+[2023-07-15 14:30:03,555] root - INFO -  Mean Sqaured Error :42162429398.549904
+[2023-07-15 14:30:03,555] root - INFO - -----------------------------
+[2023-07-15 14:30:03,555] root - INFO - Starting Prophet Model Training
+[2023-07-15 14:30:05,408] cmdstanpy - DEBUG - cmd: where.exe tbb.dll
+cwd: None
+[2023-07-15 14:30:05,497] cmdstanpy - DEBUG - Adding TBB (C:\Users\Sumeet Maheshwari\anaconda3\lib\site-packages\prophet\stan_model\cmdstan-2.31.0\stan\lib\stan_math\lib\tbb) to PATH
+[2023-07-15 14:30:05,498] root - INFO -  Adding exlog columns to the model : (['oil_price'],)
+[2023-07-15 14:30:05,516] prophet - INFO - Disabling daily seasonality. Run prophet with daily_seasonality=True to override this.
+[2023-07-15 14:30:05,551] cmdstanpy - DEBUG - input tempfile: C:\Users\Sumeet Maheshwari\AppData\Local\Temp\tmp5iwez59p\e0ahlong.json
+[2023-07-15 14:30:05,670] cmdstanpy - DEBUG - input tempfile: C:\Users\Sumeet Maheshwari\AppData\Local\Temp\tmp5iwez59p\ah5_g7dr.json
+[2023-07-15 14:30:05,675] cmdstanpy - DEBUG - idx 0
+[2023-07-15 14:30:05,675] cmdstanpy - DEBUG - running CmdStan, num_threads: None
+[2023-07-15 14:30:05,675] cmdstanpy - DEBUG - CmdStan args: ['C:\\Users\\Sumeet Maheshwari\\anaconda3\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=43357', 'data', 'file=C:\\Users\\Sumeet Maheshwari\\AppData\\Local\\Temp\\tmp5iwez59p\\e0ahlong.json', 'init=C:\\Users\\Sumeet Maheshwari\\AppData\\Local\\Temp\\tmp5iwez59p\\ah5_g7dr.json', 'output', 'file=C:\\Users\\Sumeet Maheshwari\\AppData\\Local\\Temp\\tmp5iwez59p\\prophet_modelhovt9ai8\\prophet_model-20230715143005.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+[2023-07-15 14:30:05,675] cmdstanpy - INFO - Chain [1] start processing
+[2023-07-15 14:30:06,270] cmdstanpy - INFO - Chain [1] done processing
+[2023-07-15 14:30:06,297] root - INFO -  Data fit Prophet_Exog_data with columns : Index(['ds', 'y', 'oil_price'], dtype='object')
+[2023-07-15 14:30:06,965] root - INFO -  Prophet_Exog Model training completed
+[2023-07-15 14:30:06,965] root - INFO -  Mean Sqaured Error :6826513899.820043
+[2023-07-15 14:30:06,965] root - INFO - Prophet training completed
+[2023-07-15 14:30:06,966] root - INFO - best image plot location : C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\Sales_Forecasting_Artifact\Artifact\model_training\2023-07-15-14-24-51\trained_time_model\prediction.png\prophet_exog.png
+[2023-07-15 14:30:07,019] root - INFO - Model Trainer Artifact: ModelTrainerArtifact(message='Model_Training_Done!!', trained_model_object_file_path='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\model_training\\2023-07-15-14-24-51\\trained_time_model\\model.pkl', model_report='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\model_training\\2023-07-15-14-24-51\\trained_time_model\\model.yaml', prediction_image='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\model_training\\2023-07-15-14-24-51\\trained_time_model', mse_score=6826513899.820043, saved_report_file_path='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\saved_models\\model.yaml', saved_model_file_path='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\saved_models\\model.pkl', best_model_name='Prophet', saved_model_plot='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\saved_models')
+[2023-07-15 14:30:07,048] root - INFO - 
+******************** Model Training log completed ********************
+
+
+[2023-07-15 14:30:07,048] root - INFO -  Model Evaluation Started 
+[2023-07-15 14:30:07,048] root - INFO - Saved_models directory .....
+[2023-07-15 14:30:07,049] root - INFO -  Saved models Directory is enmpty 
+[2023-07-15 14:30:07,049] root - INFO -  Artifact contents ------> Saved model Directory
+[2023-07-15 14:30:07,067] root - INFO -  Saving report at : C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\saved_models\model.yaml
+[2023-07-15 14:30:07,067] root - INFO -  Model Name : Prophet
+[2023-07-15 14:30:07,067] root - INFO -  MSE  : 6826513899.820043
+[2023-07-15 14:30:07,067] root - INFO - Dumping Data {'mse': 6826513899.820043, 'model_name': 'Prophet'}
+[2023-07-15 14:30:07,069] root - INFO -  Report Copied 
+[2023-07-15 14:30:07,069] root - INFO -  Artifact Model path : C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\Sales_Forecasting_Artifact\Artifact\model_training\2023-07-15-14-24-51\trained_time_model\model.pkl
+[2023-07-15 14:30:07,087] root - INFO - Artifact Model saved.
+[2023-07-15 14:30:07,088] root - ERROR - Error occurred !
+[2023-07-15 14:30:07,088] root - ERROR - 
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\pipeline\training_pipeline.py] at 
+                        try block line number: [96] execption block line number: [99]
+                        error message: [
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\pipeline\training_pipeline.py] at 
+                        try block line number: [78] execption block line number: [81]
+                        error message: [
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\model_eval_and_pusher.py] at 
+                        try block line number: [126] execption block line number: [157]
+                        error message: [[Errno 13] Permission denied: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\model_training\\2023-07-15-14-24-51\\trained_time_model']]]
+[2023-07-15 14:30:07,091] root - INFO - 
+******************** Model Pusher log completed ********************
+
+
