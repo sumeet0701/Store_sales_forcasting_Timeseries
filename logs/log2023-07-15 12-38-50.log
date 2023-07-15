@@ -1,0 +1,8 @@
+[2023-07-15 12:38:51,071] numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[2023-07-15 12:38:54,513] root - INFO - Training pipleine config: TrainingPipelineConfig(artifact_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact')
+[2023-07-15 12:38:54,513] root - INFO - Data Ingestion Config : DataIngestionConfig(dataset_download_url='https://github.com/sumeet0701/data-dump/blob/main/outlier_clean.zip?raw=true', tgz_download_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_ingestion\\2023-07-15-12-38-50\\tgz_data', raw_data_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_ingestion\\2023-07-15-12-38-50\\raw_data', ingested_data_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_ingestion\\2023-07-15-12-38-50\\ingested_data') 
+[2023-07-15 12:38:54,517] root - INFO - 
+******************** Data Ingestion log started ********************
+
+[2023-07-15 12:38:54,521] root - INFO - Connection with DB created successfully!!!
+[2023-07-15 12:38:54,522] root - INFO - Downloading file from: [https://github.com/sumeet0701/data-dump/blob/main/outlier_clean.zip?raw=true] into : [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\Sales_Forecasting_Artifact\Artifact\data_ingestion\2023-07-15-12-38-50\tgz_data\store_sales.zip]

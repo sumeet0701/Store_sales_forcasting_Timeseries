@@ -455,7 +455,8 @@ class ModelTrainer_time:
             # Calculate the mean of 'oil_price' within each date group
             df_gp['oil_price'] = df.groupby('date')['oil_price'].mean()
             
-            df_gp.to_csv(grouped_data_file_path)
+            df_gp.to_csv('grouped_data_file_path')
+            exog_columns = df_gp['oil_price'].values.reshape(-1, 1)
         
          
             # Training SARIMA MODEL 
@@ -465,7 +466,7 @@ class ModelTrainer_time:
             logging.info("Starting SARIMA Model Training")
             sarima_model=SarimaModelTrainer(
                                             target_column=self.target_column,
-                                           exog_columns=self.exog_columns,
+                                           exog_columns=exog_columns,
                                             image_directory=self.image_directory)
             mse_Sarima,Sarima_exog_model,plot_image_path_sarima=sarima_model.train_model(df_gp)
             
