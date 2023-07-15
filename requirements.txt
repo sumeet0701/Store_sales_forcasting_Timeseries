@@ -1,0 +1,16 @@
+pandas
+numpy
+Pyaml
+dill
+joblib
+requests
+scikit-learn
+numpy
+scipy
+xgboost
+scikit-optimize
+matplotlib
+statsmodels
+prophet
+pmdarima
+flask
