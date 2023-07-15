@@ -18,8 +18,8 @@ DATE_COLUMN='date_columns'
 
 
 
-from Sales_Forecasting.constant.training_pipeline.data_ingestion import *
-from Sales_Forecasting.constant.training_pipeline.data_validation import *
-from Sales_Forecasting.constant.training_pipeline.data_transformation import *
-from Sales_Forecasting.constant.training_pipeline.Model_trainer import *
-from Sales_Forecasting.constant.training_pipeline.model_trainer_time import *
+from store_sales.constant.training_pipeline.data_ingestion import *
+from store_sales.constant.training_pipeline.data_validation import *
+from store_sales.constant.training_pipeline.data_transformation import *
+from store_sales.constant.training_pipeline.Model_trainer import *
+from store_sales.constant.training_pipeline.model_trainer_time import *

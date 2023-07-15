@@ -1,56 +1,21 @@
 from store_sales.exception import ApplicationException
-import pandas as pd
 import pymongo
+import pandas as pd
 import os,sys
-from store_sales.constant import *
+from store_sales.constant.data_base import *
 from store_sales.exception import ApplicationException
 from store_sales.logger import logging
-from store_sales.constant import *
-from store_sales.utils.utils import *
-import yaml
-import yaml
-import pymongo
-import certifi
-import os
-# Path to the CA file
-ca_file_path = certifi.where()
-
 
 class MongoDB:
     def __init__(self):
         try:
-            # Get the absolute path to the env.yaml file
-            env_file_path = os.path.join(ROOT_DIR, 'env.yaml')
-            
-            # Load environment variables from env.yaml
-            with open(env_file_path) as file:
-                env_vars = yaml.safe_load(file)
-            username = env_vars.get('USER_NAME')
-            password = env_vars.get('PASS_WORD')
+            self.client = pymongo.MongoClient(DATABASE_CLIENT_URL_KEY)
 
-            # Use the escaped username and password in the MongoDB connection string
-            mongo_db_url = f"mongodb+srv://{username}:{password}@rentalbike.5fi8zs7.mongodb.net/"
-            
-            self.client = pymongo.MongoClient(mongo_db_url, tlsCAFile=ca_file_path)
-
-            logging.info("Connection with DB created successfully!!!")     
-            
-            
-            # Read onfig data 
-            config = read_yaml_file(file_path=CONFIG_FILE_PATH)
-            database_key=config[DATABASE_KEY]
-            database_name = database_key[DATABASE_NAME_KEY]
-            collection_name = database_key[DATABASE_COLLECTION_NAME_KEY]
-            
-            # Mongo 
-            self.db = self.client[database_name]
-            self.collection_name = collection_name
-            
-            
-
+            logging.info("Connection with DB created successfully!!!")                                
+            self.db= self.client[DATABASE_NAME_KEY]
+            self.collection_name= DATABASE_COLLECTION_NAME_KEY
         except Exception as e:
             raise ApplicationException(e,sys) from e
-
 
     def create_and_check_collection(self,coll_name:str = None)->None:
         try:
