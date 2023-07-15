@@ -1,0 +1,38 @@
+time_model_file_name: grouped_data.csv
+drop_columns:
+- family
+- locale
+- locale_name
+- description
+- city
+- state
+- cluster
+- transactions
+- transferred
+- store_nbr
+- store_type
+- holiday_type
+- onpromotion
+group_columns:
+- date
+sum_columns:
+- onpromotion
+- sales
+- holiday_type
+- store_nbr
+- store_type
+mean_columns:
+- oil_price
+encoding:
+- onpromotion
+- holiday_type
+- store_nbr
+- store_type
+target_column:
+- sales
+exog_columns:
+- oil_price
+- onpromotion
+- holiday_type
+- store_nbr
+- store_type
