@@ -1,0 +1,64 @@
+[2023-07-15 11:23:04,110] numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[2023-07-15 11:23:07,604] root - INFO - Training pipleine config: TrainingPipelineConfig(artifact_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact')
+[2023-07-15 11:23:07,604] root - INFO - Data Ingestion Config : DataIngestionConfig(dataset_download_url='https://github.com/sumeet0701/data-dump/blob/main/outlier_clean.zip?raw=true', tgz_download_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_ingestion\\2023-07-15-11-23-03\\tgz_data', raw_data_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_ingestion\\2023-07-15-11-23-03\\raw_data', ingested_data_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_ingestion\\2023-07-15-11-23-03\\ingested_data') 
+[2023-07-15 11:23:07,606] root - INFO - 
+******************** Data Ingestion log started ********************
+
+[2023-07-15 11:23:07,614] root - INFO - Connection with DB created successfully!!!
+[2023-07-15 11:23:07,614] root - INFO - Downloading file from: [https://github.com/sumeet0701/data-dump/blob/main/outlier_clean.zip?raw=true] into : [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\Sales_Forecasting_Artifact\Artifact\data_ingestion\2023-07-15-11-23-03\tgz_data\store_sales.zip]
+[2023-07-15 11:23:38,303] root - INFO - File: [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\Sales_Forecasting_Artifact\Artifact\data_ingestion\2023-07-15-11-23-03\tgz_data\store_sales.zip] has been downloaded successfully
+[2023-07-15 11:23:38,305] root - INFO - Extracting zipped file : [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\Sales_Forecasting_Artifact\Artifact\data_ingestion\2023-07-15-11-23-03\tgz_data\store_sales.zip] into dir: [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\Sales_Forecasting_Artifact\Artifact\data_ingestion\2023-07-15-11-23-03\raw_data]
+[2023-07-15 11:23:39,188] root - INFO - Extraction completed successfully
+[2023-07-15 11:24:16,413] root - INFO - Inserting file: [outlier_clean.csv] into DB
+[2023-07-15 11:24:16,413] root - INFO - Fetching entire data from DB
+[2023-07-15 11:24:16,413] root - INFO - Entire data fetched successfully from DB!!!
+[2023-07-15 11:24:16,413] root - INFO - Splitting Dataset into train and test
+[2023-07-15 11:24:16,413] root - INFO - Index(['date', 'store_nbr', 'family', 'sales', 'onpromotion', 'holiday_type',
+       'locale', 'locale_name', 'description', 'transferred', 'oil_price',
+       'city', 'state', 'store_type', 'cluster', 'transactions', 'year',
+       'month', 'week', 'quarter', 'day_of_week'],
+      dtype='object')
+[2023-07-15 11:24:16,413] root - INFO - Inserting new Training Data into DB
+[2023-07-15 11:24:16,414] root - INFO - Exporting training dataset to file: [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\Sales_Forecasting_Artifact\Artifact\data_ingestion\2023-07-15-11-23-03\ingested_data\outlier_clean.csv]
+[2023-07-15 11:24:34,517] root - INFO - Data Ingestion Artifact: [DataIngestionArtifact(Ingestion_file_path='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_ingestion\\2023-07-15-11-23-03\\ingested_data\\outlier_clean.csv', is_ingested=True, message='Data ingestion completed successfully')]
+[2023-07-15 11:24:35,573] root - INFO - 
+******************** Data Ingestion log completed ********************
+
+[2023-07-15 11:24:35,573] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Validation log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2023-07-15 11:24:35,573] root - INFO - *****************Ingested data validation Started****************
+[2023-07-15 11:24:35,578] root - INFO - Validation Process Started
+[2023-07-15 11:24:35,578] root - INFO - Checking filename
+[2023-07-15 11:24:35,580] root - INFO - Checking check_column_names
+[2023-07-15 11:24:40,874] root - INFO - Checking missing_values_whole_columns
+[2023-07-15 11:24:47,448] root - INFO - Checking replacinig_null_values_with_null
+[2023-07-15 11:24:54,852] root - INFO - replacinig_null_values_with_null is sucessfully
+[2023-07-15 11:24:54,931] root - INFO - Train_set status|is Train filename validated?: True|is train column name validated?: True|whole missing columns?True
+[2023-07-15 11:24:55,150] root - INFO - Exported validated  dataset to file: [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\Sales_Forecasting_Artifact\Artifact\data_validation\2023-07-15-11-23-03\validated_data]
+[2023-07-15 11:24:55,150] root - INFO - Data validation artifact: DataValidationArtifact(schema_file_path='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\config\\schema.yaml', message='Validated', validated_file_path='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_validation\\2023-07-15-11-23-03\\validated_data')
+[2023-07-15 11:24:55,150] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Validation log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2023-07-15 11:24:55,150] root - INFO - Data Transformation Config: DataTransformationConfig(time_series_data_file_path='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_transformation\\2023-07-15-11-23-03\\transformed_data\\time_series_data', feature_engineering_object_file_path='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_transformation\\2023-07-15-11-23-03\\preprocessed\\feat_eng.pkl')
+[2023-07-15 11:24:55,150] root - INFO - 
+******************** Data Transformation log started ********************
+
+
+[2023-07-15 11:24:55,155] root - INFO - Obtaining file from file path 
+[2023-07-15 11:24:55,155] root - INFO - Loading Data as pandas dataframe.
+[2023-07-15 11:24:55,155] root - ERROR - 
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\pipeline\training_pipeline.py] at 
+                        try block line number: [91] execption block line number: [99]
+                        error message: [
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\pipeline\training_pipeline.py] at 
+                        try block line number: [59] execption block line number: [61]
+                        error message: [
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\data_transformation.py] at 
+                        try block line number: [393] execption block line number: [457]
+                        error message: ['File_Name']]]
+[2023-07-15 11:24:55,158] root - INFO - 
+******************** Data Transformation log completed ********************
+
+

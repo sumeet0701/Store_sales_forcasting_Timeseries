@@ -1,0 +1,244 @@
+[2023-07-15 11:01:18,272] numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[2023-07-15 11:01:24,731] root - INFO - Training pipleine config: TrainingPipelineConfig(artifact_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact')
+[2023-07-15 11:01:24,732] root - INFO - Data Ingestion Config : DataIngestionConfig(dataset_download_url='https://github.com/sumeet0701/data-dump/blob/main/outlier_clean.zip?raw=true', tgz_download_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_ingestion\\2023-07-15-11-01-17\\tgz_data', raw_data_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_ingestion\\2023-07-15-11-01-17\\raw_data', ingested_data_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_ingestion\\2023-07-15-11-01-17\\ingested_data') 
+[2023-07-15 11:01:24,732] root - INFO - 
+******************** Data Ingestion log started ********************
+
+[2023-07-15 11:01:24,733] root - ERROR - Error type: ApplicationException
+        Error message: Error type: ApplicationException
+        Error message: Error type: ApplicationException
+        Error message: Error type: FileNotFoundError
+        Error message: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+        Error traceback:
+        Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 26, in __init__
+    with open(env_file_path) as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+        Error traceback:
+        Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 26, in __init__
+    with open(env_file_path) as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\data_ingestion.py", line 23, in __init__
+    self.db = MongoDB()
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 52, in __init__
+    raise ApplicationException(e,sys) from e
+store_sales.exception.ApplicationException: Error type: FileNotFoundError
+        Error message: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+        Error traceback:
+        Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 26, in __init__
+    with open(env_file_path) as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+        Error traceback:
+        Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 26, in __init__
+    with open(env_file_path) as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\data_ingestion.py", line 23, in __init__
+    self.db = MongoDB()
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 52, in __init__
+    raise ApplicationException(e,sys) from e
+store_sales.exception.ApplicationException: Error type: FileNotFoundError
+        Error message: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+        Error traceback:
+        Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 26, in __init__
+    with open(env_file_path) as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\pipeline\training_pipeline.py", line 38, in start_data_ingestion
+    data_ingestion = DataIngestion(data_ingestion_config=self.config.get_data_ingestion_config())
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\data_ingestion.py", line 26, in __init__
+    raise ApplicationException(e,sys) from e
+store_sales.exception.ApplicationException: Error type: ApplicationException
+        Error message: Error type: FileNotFoundError
+        Error message: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+        Error traceback:
+        Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 26, in __init__
+    with open(env_file_path) as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+        Error traceback:
+        Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 26, in __init__
+    with open(env_file_path) as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\data_ingestion.py", line 23, in __init__
+    self.db = MongoDB()
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 52, in __init__
+    raise ApplicationException(e,sys) from e
+store_sales.exception.ApplicationException: Error type: FileNotFoundError
+        Error message: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+        Error traceback:
+        Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 26, in __init__
+    with open(env_file_path) as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+        Error traceback:
+        Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 26, in __init__
+    with open(env_file_path) as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\data_ingestion.py", line 23, in __init__
+    self.db = MongoDB()
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 52, in __init__
+    raise ApplicationException(e,sys) from e
+store_sales.exception.ApplicationException: Error type: FileNotFoundError
+        Error message: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+        Error traceback:
+        Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 26, in __init__
+    with open(env_file_path) as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\pipeline\training_pipeline.py", line 38, in start_data_ingestion
+    data_ingestion = DataIngestion(data_ingestion_config=self.config.get_data_ingestion_config())
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\data_ingestion.py", line 26, in __init__
+    raise ApplicationException(e,sys) from e
+store_sales.exception.ApplicationException: Error type: ApplicationException
+        Error message: Error type: FileNotFoundError
+        Error message: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+        Error traceback:
+        Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 26, in __init__
+    with open(env_file_path) as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+        Error traceback:
+        Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 26, in __init__
+    with open(env_file_path) as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\data_ingestion.py", line 23, in __init__
+    self.db = MongoDB()
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 52, in __init__
+    raise ApplicationException(e,sys) from e
+store_sales.exception.ApplicationException: Error type: FileNotFoundError
+        Error message: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+        Error traceback:
+        Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 26, in __init__
+    with open(env_file_path) as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\pipeline\training_pipeline.py", line 89, in run_pipeline
+    data_ingestion_artifact = self.start_data_ingestion()
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\pipeline\training_pipeline.py", line 41, in start_data_ingestion
+    raise ApplicationException(e, sys) from e
+store_sales.exception.ApplicationException: Error type: ApplicationException
+        Error message: Error type: ApplicationException
+        Error message: Error type: FileNotFoundError
+        Error message: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+        Error traceback:
+        Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 26, in __init__
+    with open(env_file_path) as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+        Error traceback:
+        Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 26, in __init__
+    with open(env_file_path) as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\data_ingestion.py", line 23, in __init__
+    self.db = MongoDB()
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 52, in __init__
+    raise ApplicationException(e,sys) from e
+store_sales.exception.ApplicationException: Error type: FileNotFoundError
+        Error message: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+        Error traceback:
+        Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 26, in __init__
+    with open(env_file_path) as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+        Error traceback:
+        Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 26, in __init__
+    with open(env_file_path) as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\data_ingestion.py", line 23, in __init__
+    self.db = MongoDB()
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 52, in __init__
+    raise ApplicationException(e,sys) from e
+store_sales.exception.ApplicationException: Error type: FileNotFoundError
+        Error message: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+        Error traceback:
+        Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 26, in __init__
+    with open(env_file_path) as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\pipeline\training_pipeline.py", line 38, in start_data_ingestion
+    data_ingestion = DataIngestion(data_ingestion_config=self.config.get_data_ingestion_config())
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\data_ingestion.py", line 26, in __init__
+    raise ApplicationException(e,sys) from e
+store_sales.exception.ApplicationException: Error type: ApplicationException
+        Error message: Error type: FileNotFoundError
+        Error message: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+        Error traceback:
+        Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 26, in __init__
+    with open(env_file_path) as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+        Error traceback:
+        Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 26, in __init__
+    with open(env_file_path) as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\data_ingestion.py", line 23, in __init__
+    self.db = MongoDB()
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 52, in __init__
+    raise ApplicationException(e,sys) from e
+store_sales.exception.ApplicationException: Error type: FileNotFoundError
+        Error message: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+        Error traceback:
+        Traceback (most recent call last):
+  File "C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\db_operation.py", line 26, in __init__
+    with open(env_file_path) as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\env.yaml'
+[2023-07-15 11:01:24,759] root - INFO - 
+******************** Data Ingestion log completed ********************
+

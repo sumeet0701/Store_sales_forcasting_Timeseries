@@ -1,0 +1,49 @@
+[2023-07-15 11:09:57,233] numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[2023-07-15 11:10:00,929] root - INFO - Training pipleine config: TrainingPipelineConfig(artifact_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact')
+[2023-07-15 11:10:00,929] root - INFO - Data Ingestion Config : DataIngestionConfig(dataset_download_url='https://github.com/sumeet0701/data-dump/blob/main/outlier_clean.zip?raw=true', tgz_download_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_ingestion\\2023-07-15-11-09-56\\tgz_data', raw_data_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_ingestion\\2023-07-15-11-09-56\\raw_data', ingested_data_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_ingestion\\2023-07-15-11-09-56\\ingested_data') 
+[2023-07-15 11:10:00,931] root - INFO - 
+******************** Data Ingestion log started ********************
+
+[2023-07-15 11:10:00,938] root - INFO - Connection with DB created successfully!!!
+[2023-07-15 11:10:00,940] root - INFO - Downloading file from: [https://github.com/sumeet0701/data-dump/blob/main/outlier_clean.zip?raw=true] into : [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\Sales_Forecasting_Artifact\Artifact\data_ingestion\2023-07-15-11-09-56\tgz_data\store_sales.zip]
+[2023-07-15 11:10:26,047] root - INFO - File: [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\Sales_Forecasting_Artifact\Artifact\data_ingestion\2023-07-15-11-09-56\tgz_data\store_sales.zip] has been downloaded successfully
+[2023-07-15 11:10:26,047] root - INFO - Extracting zipped file : [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\Sales_Forecasting_Artifact\Artifact\data_ingestion\2023-07-15-11-09-56\tgz_data\store_sales.zip] into dir: [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\Sales_Forecasting_Artifact\Artifact\data_ingestion\2023-07-15-11-09-56\raw_data]
+[2023-07-15 11:10:27,157] root - INFO - Extraction completed successfully
+[2023-07-15 11:11:07,762] root - INFO - Inserting file: [outlier_clean.csv] into DB
+[2023-07-15 11:11:07,762] root - INFO - Fetching entire data from DB
+[2023-07-15 11:11:07,762] root - INFO - Entire data fetched successfully from DB!!!
+[2023-07-15 11:11:07,762] root - INFO - Splitting Dataset into train and test
+[2023-07-15 11:11:07,763] root - INFO - Index(['date', 'store_nbr', 'family', 'sales', 'onpromotion', 'holiday_type',
+       'locale', 'locale_name', 'description', 'transferred', 'oil_price',
+       'city', 'state', 'store_type', 'cluster', 'transactions', 'year',
+       'month', 'week', 'quarter', 'day_of_week'],
+      dtype='object')
+[2023-07-15 11:11:07,763] root - INFO - Inserting new Training Data into DB
+[2023-07-15 11:11:07,764] root - INFO - Exporting training dataset to file: [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\Sales_Forecasting_Artifact\Artifact\data_ingestion\2023-07-15-11-09-56\ingested_data\outlier_clean.csv]
+[2023-07-15 11:11:41,097] root - INFO - Data Ingestion Artifact: [DataIngestionArtifact(Ingestion_file_path='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_ingestion\\2023-07-15-11-09-56\\ingested_data\\outlier_clean.csv', is_ingested=True, message='Data ingestion completed successfully')]
+[2023-07-15 11:11:43,009] root - INFO - 
+******************** Data Ingestion log completed ********************
+
+[2023-07-15 11:11:43,009] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Validation log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2023-07-15 11:11:43,019] root - INFO - Validation Process Started
+[2023-07-15 11:12:07,582] root - INFO - Train_set status|is Train filename validated?: None|is train column name validated?: True|whole missing columns?True
+[2023-07-15 11:12:07,582] root - ERROR - 
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\pipeline\training_pipeline.py] at 
+                        try block line number: [90] execption block line number: [99]
+                        error message: [
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\pipeline\training_pipeline.py] at 
+                        try block line number: [47] execption block line number: [49]
+                        error message: [
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\data_validation.py] at 
+                        try block line number: [112] execption block line number: [130]
+                        error message: [
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\data_validation.py] at 
+                        try block line number: [86] execption block line number: [106]
+                        error message: [unsupported operand type(s) for &: 'NoneType' and 'bool']]]]
+[2023-07-15 11:12:07,585] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Validation log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

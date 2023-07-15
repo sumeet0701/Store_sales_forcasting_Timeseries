@@ -1,5 +1,5 @@
-File_Name: outlier_trimmed.csv
-columns:
+FileName: outlier_clean.csv
+ColumnNames:
   date: object
   store_nbr: int64
   family: object

@@ -20,6 +20,14 @@ DataTransformationConfig = namedtuple("DataTransformationConfig",[
     "time_series_data_file_path",
     "feature_engineering_object_file_path"])
 
+DatabaseConfig = namedtuple("DatabaseConfig",[
+    "client_url",
+    "database_name",
+    "collection_name",
+    "training_collection_name",
+    "test_collection_name"])
+
+ 
 
 
 

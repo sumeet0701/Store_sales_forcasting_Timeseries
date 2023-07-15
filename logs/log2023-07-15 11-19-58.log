@@ -1,0 +1,56 @@
+[2023-07-15 11:19:58,865] numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[2023-07-15 11:20:02,391] root - INFO - Training pipleine config: TrainingPipelineConfig(artifact_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact')
+[2023-07-15 11:20:02,391] root - INFO - Data Ingestion Config : DataIngestionConfig(dataset_download_url='https://github.com/sumeet0701/data-dump/blob/main/outlier_clean.zip?raw=true', tgz_download_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_ingestion\\2023-07-15-11-19-58\\tgz_data', raw_data_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_ingestion\\2023-07-15-11-19-58\\raw_data', ingested_data_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_ingestion\\2023-07-15-11-19-58\\ingested_data') 
+[2023-07-15 11:20:02,392] root - INFO - 
+******************** Data Ingestion log started ********************
+
+[2023-07-15 11:20:02,398] root - INFO - Connection with DB created successfully!!!
+[2023-07-15 11:20:02,399] root - INFO - Downloading file from: [https://github.com/sumeet0701/data-dump/blob/main/outlier_clean.zip?raw=true] into : [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\Sales_Forecasting_Artifact\Artifact\data_ingestion\2023-07-15-11-19-58\tgz_data\store_sales.zip]
+[2023-07-15 11:20:22,882] root - INFO - File: [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\Sales_Forecasting_Artifact\Artifact\data_ingestion\2023-07-15-11-19-58\tgz_data\store_sales.zip] has been downloaded successfully
+[2023-07-15 11:20:22,883] root - INFO - Extracting zipped file : [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\Sales_Forecasting_Artifact\Artifact\data_ingestion\2023-07-15-11-19-58\tgz_data\store_sales.zip] into dir: [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\Sales_Forecasting_Artifact\Artifact\data_ingestion\2023-07-15-11-19-58\raw_data]
+[2023-07-15 11:20:23,728] root - INFO - Extraction completed successfully
+[2023-07-15 11:21:01,431] root - INFO - Inserting file: [outlier_clean.csv] into DB
+[2023-07-15 11:21:01,432] root - INFO - Fetching entire data from DB
+[2023-07-15 11:21:01,432] root - INFO - Entire data fetched successfully from DB!!!
+[2023-07-15 11:21:01,432] root - INFO - Splitting Dataset into train and test
+[2023-07-15 11:21:01,432] root - INFO - Index(['date', 'store_nbr', 'family', 'sales', 'onpromotion', 'holiday_type',
+       'locale', 'locale_name', 'description', 'transferred', 'oil_price',
+       'city', 'state', 'store_type', 'cluster', 'transactions', 'year',
+       'month', 'week', 'quarter', 'day_of_week'],
+      dtype='object')
+[2023-07-15 11:21:01,432] root - INFO - Inserting new Training Data into DB
+[2023-07-15 11:21:01,432] root - INFO - Exporting training dataset to file: [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\Sales_Forecasting_Artifact\Artifact\data_ingestion\2023-07-15-11-19-58\ingested_data\outlier_clean.csv]
+[2023-07-15 11:21:19,108] root - INFO - Data Ingestion Artifact: [DataIngestionArtifact(Ingestion_file_path='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_ingestion\\2023-07-15-11-19-58\\ingested_data\\outlier_clean.csv', is_ingested=True, message='Data ingestion completed successfully')]
+[2023-07-15 11:21:20,124] root - INFO - 
+******************** Data Ingestion log completed ********************
+
+[2023-07-15 11:21:20,125] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Validation log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2023-07-15 11:21:20,125] root - INFO - *****************Ingested data validation Started****************
+[2023-07-15 11:21:20,134] root - INFO - Validation Process Started
+[2023-07-15 11:21:20,134] root - INFO - Checking filename
+[2023-07-15 11:21:20,135] root - INFO - Checking check_column_names
+[2023-07-15 11:21:25,285] root - INFO - Checking missing_values_whole_columns
+[2023-07-15 11:21:31,161] root - INFO - Checking replacinig_null_values_with_null
+[2023-07-15 11:21:39,033] root - INFO - replacinig_null_values_with_null is sucessfully
+[2023-07-15 11:21:39,098] root - INFO - Train_set status|is Train filename validated?: False|is train column name validated?: True|whole missing columns?True
+[2023-07-15 11:21:39,099] root - INFO - Check yout Data! Validation Failed
+[2023-07-15 11:21:39,099] root - ERROR - 
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\pipeline\training_pipeline.py] at 
+                        try block line number: [90] execption block line number: [99]
+                        error message: [
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\pipeline\training_pipeline.py] at 
+                        try block line number: [47] execption block line number: [49]
+                        error message: [
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\data_validation.py] at 
+                        try block line number: [112] execption block line number: [130]
+                        error message: [
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\store_sales\components\data_validation.py] at 
+                        try block line number: [100] execption block line number: [106]
+                        error message: [Check your data! Validation failed]]]]
+[2023-07-15 11:21:39,101] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Validation log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
