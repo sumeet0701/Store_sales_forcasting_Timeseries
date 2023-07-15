@@ -20,8 +20,8 @@ class IngestedDataValidation:
     def validate_filename(self, file_name)->bool:
         try:
             logging.info(f"Checking filename")
-            print(self.data["FileName"])
-            schema_file_name = self.data['FileName']
+            print(self.data["File_Name"])
+            schema_file_name = self.data['File_Name']
             if schema_file_name == file_name:
                 return True
             else:

@@ -1,4 +1,4 @@
-FileName: outlier_clean.csv
+File_Name: outlier_clean.csv
 ColumnNames:
   date: object
   store_nbr: int64

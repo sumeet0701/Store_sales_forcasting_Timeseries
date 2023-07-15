@@ -20,10 +20,6 @@ TARGET_COLUMN='target_column'
 ENCODE_COLUMNS='encoding'
 
 
-DATABASE_KEY='data_base'
-DATABASE_NAME_KEY='data_base_name'
-DATABASE_COLLECTION_NAME_KEY='collection_name'
-
 
 from store_sales.constant.training_pipeline import *
 from store_sales.constant.data_base import *

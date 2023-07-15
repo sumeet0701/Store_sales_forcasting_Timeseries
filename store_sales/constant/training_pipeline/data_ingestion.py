@@ -13,5 +13,5 @@ CONFIG_FILE_KEY = "config"
 
 DOWNLOAD_LINK="download_link"
 FILE_NAME="File_Name"
-DESTINATION_FOLDER=r"E:\Ineuron may batch projects\Projects\Store sales Forecasting\cleaned_data"
+
 
