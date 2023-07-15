@@ -1,4 +1,4 @@
-from store_sales.pipeline.train import Pipeline
+from store_sales.pipeline.training_pipeline import Pipeline
 from store_sales.logger import logging
 import os
 
