@@ -15,6 +15,7 @@ SUM_COLUMN = 'sum_columns'
 MEAN_COLUMN = 'mean_columns'
 
 DROP_COLUMNS='drop_columns'
+LABEL_ENCODE_COLUMNS='encoding'
 
 # Prediction 
 PREDICTION_ROWS='prediction_rows'
