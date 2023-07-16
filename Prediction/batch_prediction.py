@@ -308,7 +308,7 @@ class BatchPrediction:
         exog_columns=self.exog_columns
         target_column=self.target_column
         model_file = self.model
-        name = self.get_model_name_from_yaml(file_path=r"C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\saved_models\model.yaml")
+        name = self.get_model_name_from_yaml(file_path=r"E:\Ineuron may batch projects\Projects\Store sales Forecasting\saved_models\model.yaml")
         
         if name:
             logging.info(f"Model Name :{name}")
@@ -325,3 +325,6 @@ class BatchPrediction:
                 print("Unsupported model. Cannot perform prediction.")
                 
         return plot_file_path
+    
+    
+    

@@ -1,0 +1,19 @@
+[2023-07-16 08:59:59,350] root - INFO - Training pipleine config: TrainingPipelineConfig(artifact_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact')
+[2023-07-16 08:59:59,370] werkzeug - WARNING -  * Debugger is active!
+[2023-07-16 08:59:59,375] werkzeug - INFO -  * Debugger PIN: 344-037-183
+[2023-07-16 08:59:59,417] werkzeug - INFO - 127.0.0.1 - - [16/Jul/2023 08:59:59] "GET / HTTP/1.1" 200 -
+[2023-07-16 09:00:01,819] werkzeug - INFO - 127.0.0.1 - - [16/Jul/2023 09:00:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2023-07-16 09:00:03,060] root - INFO - Data Ingestion Config : DataIngestionConfig(dataset_download_url='https://github.com/sumeet0701/data-dump/blob/main/outlier_clean.zip?raw=true', tgz_download_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_ingestion\\2023-07-16-08-59-56\\tgz_data', raw_data_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_ingestion\\2023-07-16-08-59-56\\raw_data', ingested_data_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact\\data_ingestion\\2023-07-16-08-59-56\\ingested_data') 
+[2023-07-16 09:00:03,062] root - INFO - 
+******************** Data Ingestion log started ********************
+
+[2023-07-16 09:00:03,070] werkzeug - INFO -  * Detected change in 'C:\\Users\\Sumeet Maheshwari\\anaconda3\\Lib\\site-packages\\pymongo\\settings.py', reloading
+[2023-07-16 09:00:03,073] werkzeug - INFO -  * Detected change in 'C:\\Users\\Sumeet Maheshwari\\anaconda3\\Lib\\site-packages\\pymongo\\mongo_client.py', reloading
+[2023-07-16 09:00:03,082] werkzeug - INFO -  * Detected change in 'C:\\Users\\Sumeet Maheshwari\\anaconda3\\Lib\\site-packages\\flask\\app.py', reloading
+[2023-07-16 09:00:03,087] werkzeug - INFO -  * Detected change in 'C:\\Users\\Sumeet Maheshwari\\anaconda3\\Lib\\site-packages\\werkzeug\\debug\\__init__.py', reloading
+[2023-07-16 09:00:03,090] werkzeug - INFO -  * Detected change in 'C:\\Users\\Sumeet Maheshwari\\anaconda3\\Lib\\site-packages\\werkzeug\\serving.py', reloading
+[2023-07-16 09:00:03,094] werkzeug - INFO -  * Detected change in 'C:\\Users\\Sumeet Maheshwari\\anaconda3\\Lib\\http\\server.py', reloading
+[2023-07-16 09:00:03,099] werkzeug - INFO -  * Detected change in 'C:\\Users\\Sumeet Maheshwari\\anaconda3\\Lib\\socketserver.py', reloading
+[2023-07-16 09:00:03,105] werkzeug - INFO -  * Detected change in 'C:\\Users\\Sumeet Maheshwari\\anaconda3\\Lib\\threading.py', reloading
+[2023-07-16 09:00:03,109] root - INFO - Connection with DB created successfully!!!
+[2023-07-16 09:00:03,111] root - INFO - Downloading file from: [https://github.com/sumeet0701/data-dump/blob/main/outlier_clean.zip?raw=true] into : [C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\Sales_Forecasting_Artifact\Artifact\data_ingestion\2023-07-16-08-59-56\tgz_data\store_sales.zip]
