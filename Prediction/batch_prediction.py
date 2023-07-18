@@ -251,10 +251,10 @@ class BatchPrediction:
         df_gp=df.groupby('date')['oil_price', 'sales'].mean()
 
         logging.info("df_gp series created")
-        df_gp =pd.DataFrame(df_gp)
+        #df_gp =pd.DataFrame(df_gp)
         logging.info("df_gp dataframe created")
         exog_data = df_gp[['oil_price']]
-        df_gp.to_csv("grouped_data.csv")
+        #df_gp.to_csv("grouped_data.csv")
         #df_gp.csv("Grouped_data")
         
         # Prepare the input data for prediction
@@ -269,7 +269,7 @@ class BatchPrediction:
                     df[column] = exog_data[column].values.astype(float)
                 else:
                     raise ValueError(f"Column '{column}' not found in the input data.")
-        df.to_csv("exog_column.csv ")
+        #df.to_csv("exog_column.csv ")
         # Make predictions
         logging.info("Predictions stated")
     
@@ -280,24 +280,24 @@ class BatchPrediction:
 
         # Get the last few 100 values
         new_df = df_gp.copy()
-        new_df.to_csv("new_df.csv")
+       # new_df.to_csv("new_df.csv")
         logging.info("New_dataframe created.")
         #new_df['date'] = pd.to_datetime(new_df['date'])
         logging.info("date columns is converted into datetime format")
         #new_df['date'] = pd.to_datetime(df['date'])
         logging.info("Converting date columns into index")
-        new_df.set_index('date', inplace=True)
+        #new_df.set_index('date', inplace=True)
         logging.info("converted date columns into index")
-        new_df.to_csv('Updated.csv')
+       # new_df.to_csv('Updated.csv')
         logging.info("Updated new df created")
         last_few_values = new_df.iloc[-100:]
 
         # Get the corresponding predictions for the last 100 values
         last_few_predictions = predictions[predictions['ds'].isin(last_few_values.index)]
         logging.info(f"{type(last_few_values)}")
-        last_few_values.to_csv("last_few_values.csv")
+        #last_few_values.to_csv("last_few_values.csv")
         logging.info(f"{type(last_few_predictions)}")
-        last_few_predictions.to_csv("last_few_predictions.csv")
+        #last_few_predictions.to_csv("last_few_predictions.csv")
 
         # Create the plot
         plt.figure(figsize=(10, 6))
