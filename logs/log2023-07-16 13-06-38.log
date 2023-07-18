@@ -1,0 +1,6 @@
+[2023-07-16 13:06:42,439] root - INFO - Training pipleine config: TrainingPipelineConfig(artifact_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact')
+[2023-07-16 13:06:42,463] werkzeug - WARNING -  * Debugger is active!
+[2023-07-16 13:06:42,465] werkzeug - INFO -  * Debugger PIN: 344-037-183
+[2023-07-16 13:06:45,088] werkzeug - INFO -  * Detected change in 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Prediction\\batch_prediction.py', reloading
+[2023-07-16 13:06:45,091] werkzeug - INFO -  * Detected change in 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Prediction\\batch_prediction.py', reloading
+[2023-07-16 13:06:45,092] werkzeug - INFO -  * Detected change in 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Prediction\\batch_prediction.py', reloading

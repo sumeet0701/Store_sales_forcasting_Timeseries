@@ -138,7 +138,7 @@ class BatchPrediction:
     def Sarima_predict(self, data):
         
         # Accessing necessary Data 
-        exog_columns=self.exog_columns
+        exog_columns=['oil_price']
         target_column=self.target_column
         # LAbel encode columns 
         label_encode_columns=self.label_encode_columns
@@ -205,24 +205,29 @@ class BatchPrediction:
        
     
     def Prophet_predict(self,data):
-        
+        logging.info("Prophet prediction started")
         # Accessing necessary Data 
-        exog_columns=self.exog_columns
+        
+        exog_columns=['oil_price']
         target_column=self.target_column
         
         drop_columns=self.drop_columns_list
-        
+        logging.info("Columns dropped")
         df = data.copy()
+        #df.to_csv("dataframe.csv")
 
+        logging.info("df copyed")
         # Setting Date column as index
         df['date'] = pd.to_datetime(df['date'])
         df.set_index('date', inplace=True)
 
         # Dropping unnecessary columns
         df = self.drop_columns(df,drop_columns)
+        logging.info("unnecessary columns dropped")
 
         # Renaming Date column
         df = df.rename(columns={'date': 'ds'})
+        logging.info("rename done")
        # df.to_csv("prophet_data.csv")
         '''
         # datatype --> category
@@ -241,10 +246,16 @@ class BatchPrediction:
        # exog_data.to_csv('exog_prophet.csv')
 
           '''
-      
         
-        df_gp=df.groupby('date')['oil_price']
-        exog_data = df_gp[exog_columns]
+        
+        df_gp=df.groupby('date')['oil_price', 'sales'].mean()
+
+        logging.info("df_gp series created")
+        df_gp =pd.DataFrame(df_gp)
+        logging.info("df_gp dataframe created")
+        exog_data = df_gp[['oil_price']]
+        df_gp.to_csv("grouped_data.csv")
+        #df_gp.csv("Grouped_data")
         
         # Prepare the input data for prediction
         df = df_gp.copy()
@@ -258,16 +269,35 @@ class BatchPrediction:
                     df[column] = exog_data[column].values.astype(float)
                 else:
                     raise ValueError(f"Column '{column}' not found in the input data.")
-
+        df.to_csv("exog_column.csv ")
         # Make predictions
+        logging.info("Predictions stated")
+    
         predictions = self.model.predict(df)
+        logging.info("Prediction completed")
+        logging.info(f"{predictions}")
+        logging.info(f"{type(predictions)}")
 
         # Get the last few 100 values
-        last_few_values = df_gp.iloc[-100:]
+        new_df = df_gp.copy()
+        new_df.to_csv("new_df.csv")
+        logging.info("New_dataframe created.")
+        #new_df['date'] = pd.to_datetime(new_df['date'])
+        logging.info("date columns is converted into datetime format")
+        #new_df['date'] = pd.to_datetime(df['date'])
+        logging.info("Converting date columns into index")
+        new_df.set_index('date', inplace=True)
+        logging.info("converted date columns into index")
+        new_df.to_csv('Updated.csv')
+        logging.info("Updated new df created")
+        last_few_values = new_df.iloc[-100:]
 
         # Get the corresponding predictions for the last 100 values
         last_few_predictions = predictions[predictions['ds'].isin(last_few_values.index)]
-        
+        logging.info(f"{type(last_few_values)}")
+        last_few_values.to_csv("last_few_values.csv")
+        logging.info(f"{type(last_few_predictions)}")
+        last_few_predictions.to_csv("last_few_predictions.csv")
 
         # Create the plot
         plt.figure(figsize=(10, 6))
@@ -305,10 +335,10 @@ class BatchPrediction:
         return plot_file_path
     def prediction(self,data):
         
-        exog_columns=self.exog_columns
+        exog_columns=['oil_price']
         target_column=self.target_column
         model_file = self.model
-        name = self.get_model_name_from_yaml(file_path=r"E:\Ineuron may batch projects\Projects\Store sales Forecasting\saved_models\model.yaml")
+        name = self.get_model_name_from_yaml(file_path=r"C:\Users\Sumeet Maheshwari\Desktop\end to end project\sales_store\Store_sales_forcasting_Timeseries\saved_models\model.yaml")
         
         if name:
             logging.info(f"Model Name :{name}")

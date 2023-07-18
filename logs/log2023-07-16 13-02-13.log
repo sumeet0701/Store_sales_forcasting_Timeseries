@@ -1,0 +1,15 @@
+[2023-07-16 13:02:16,600] root - INFO - Training pipleine config: TrainingPipelineConfig(artifact_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact')
+[2023-07-16 13:02:16,629] werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2023-07-16 13:02:16,629] werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[2023-07-16 13:02:16,646] werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+[2023-07-16 13:03:47,012] werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+[2023-07-16 13:05:19,645] werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+[2023-07-16 13:05:37,630] werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+[2023-07-16 13:05:50,238] werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+[2023-07-16 13:05:59,412] werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+[2023-07-16 13:06:11,243] werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+[2023-07-16 13:06:25,028] werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+[2023-07-16 13:06:34,933] werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+[2023-07-16 13:06:46,635] werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+[2023-07-16 13:06:58,043] werkzeug - INFO -  * Restarting with watchdog (windowsapi)

@@ -32,8 +32,11 @@ target_column:
 - sales
 exog_columns:
 - oil_price
-- onpromotion
-- holiday_type
-- store_nbr
-- store_type
+
+
+
+#- onpromotion
+#- holiday_type
+#- store_nbr
+#- store_type
 
