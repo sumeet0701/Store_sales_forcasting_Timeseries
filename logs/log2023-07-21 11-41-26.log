@@ -1,0 +1,11 @@
+[2023-07-21 11:41:28,313] root - INFO - Training pipleine config: TrainingPipelineConfig(artifact_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact')
+[2023-07-21 11:41:28,328] werkzeug - WARNING -  * Debugger is active!
+[2023-07-21 11:41:28,330] werkzeug - INFO -  * Debugger PIN: 344-037-183
+[2023-07-21 11:41:49,291] root - INFO - Model Name :Prophet
+[2023-07-21 11:41:49,292] root - INFO - Prophet prediction started
+[2023-07-21 11:41:49,744] werkzeug - INFO -  * Detected change in 'C:\\Users\\Sumeet Maheshwari\\anaconda3\\Lib\\site-packages\\pandas\\core\\groupby\\generic.py', reloading
+[2023-07-21 11:41:49,763] werkzeug - INFO - 127.0.0.1 - - [21/Jul/2023 11:41:49] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[2023-07-21 11:41:50,097] werkzeug - INFO - 127.0.0.1 - - [21/Jul/2023 11:41:50] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2023-07-21 11:41:50,098] werkzeug - INFO - 127.0.0.1 - - [21/Jul/2023 11:41:50] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2023-07-21 11:41:50,134] werkzeug - INFO - 127.0.0.1 - - [21/Jul/2023 11:41:50] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2023-07-21 11:41:50,314] werkzeug - INFO - 127.0.0.1 - - [21/Jul/2023 11:41:50] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -

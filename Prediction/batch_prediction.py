@@ -207,7 +207,7 @@ class BatchPrediction:
     def Prophet_predict(self,data):
         logging.info("Prophet prediction started")
         # Accessing necessary Data 
-        
+        """
         exog_columns=['oil_price']
         target_column=self.target_column
         
@@ -258,57 +258,108 @@ class BatchPrediction:
         #df_gp.csv("Grouped_data")
         
         # Prepare the input data for prediction
-        df = df_gp.copy()
-        df['ds'] = pd.to_datetime(df.index)
-        df = df.rename(columns={'sales': 'y'})
+        df_copy = df_gp.copy()
+        df_copy['ds'] = pd.to_datetime(df_copy.index)
+        df_copy = df_copy.rename(columns={'sales': 'y'})
 
         # Include exogenous variables
         if exog_columns is not None:
             for column in exog_columns:
-                if column in df.columns:
-                    df[column] = exog_data[column].values.astype(float)
+                if column in df_copy.columns:
+                    df_copy[column] = exog_data[column].values.astype(float)
                 else:
                     raise ValueError(f"Column '{column}' not found in the input data.")
         #df.to_csv("exog_column.csv ")
+        new_df = df.copy()
+
+        # ... (previous code remains the same) ...
+
         # Make predictions
-        logging.info("Predictions stated")
-    
-        predictions = self.model.predict(df)
+        logging.info("Predictions started")
+        predictions = self.model.predict(df_copy)
         logging.info("Prediction completed")
         logging.info(f"{predictions}")
+        logging.info(f"{predictions.columns}")
+
         logging.info(f"{type(predictions)}")
 
         # Get the last few 100 values
-        new_df = df_gp.copy()
-       # new_df.to_csv("new_df.csv")
-        logging.info("New_dataframe created.")
-        #new_df['date'] = pd.to_datetime(new_df['date'])
-        logging.info("date columns is converted into datetime format")
-        #new_df['date'] = pd.to_datetime(df['date'])
-        logging.info("Converting date columns into index")
-        #new_df.set_index('date', inplace=True)
-        logging.info("converted date columns into index")
-       # new_df.to_csv('Updated.csv')
-        logging.info("Updated new df created")
         last_few_values = new_df.iloc[-100:]
 
-        # Get the corresponding predictions for the last 100 values
-        last_few_predictions = predictions[predictions['ds'].isin(last_few_values.index)]
-        logging.info(f"{type(last_few_values)}")
-        #last_few_values.to_csv("last_few_values.csv")
-        logging.info(f"{type(last_few_predictions)}")
-        #last_few_predictions.to_csv("last_few_predictions.csv")
+        # Create a new DataFrame for predictions with 'ds' and 'yhat' columns
+        last_few_predictions = pd.DataFrame({
+            'ds': pd.to_datetime(predictions['ds']),  # Convert 'ds' to datetime format
+            'yhat': predictions['yhat']
+        })
+
+        # Set the 'ds' column as the index for both DataFrames
+        last_few_predictions.set_index('ds', inplace=True)
 
         # Create the plot
         plt.figure(figsize=(10, 6))
-        plt.plot(last_few_values.index, last_few_values[target_column], label='Actual')
-        plt.plot(last_few_predictions['ds'].values, last_few_predictions['yhat'].values, label='Predicted')
+        plt.plot(last_few_values.index, last_few_values[target_column], label='Actual', color='blue')
+        plt.plot(last_few_predictions.index, last_few_predictions['yhat'], label='Predicted', color='orange')
+        plt.xlabel('Time')
+        plt.ylabel('Value')
+        plt.title('Time Series Prediction')
+        plt.legend()
+        """
+       # Accessing necessary Data 
+        exog_columns = ['oil_price']
+        target_column = self.target_column
+        drop_columns = self.drop_columns_list
+
+        df = data.copy()
+
+        # Setting Date column as index
+        df['date'] = pd.to_datetime(df['date'])
+        df.set_index('date', inplace=True)
+
+        # Dropping unnecessary columns
+        df = self.drop_columns(df, drop_columns)
+
+        # Renaming Date column
+        df = df.rename(columns={'date': 'ds'})
+        # df.to_csv("prophet_data.csv")
+
+        # Group data and include the 'target_column' and 'exog_columns'
+        df_gp = df.resample('D').mean()
+
+        # Include exogenous variables
+        if exog_columns is not None:
+            for column in exog_columns:
+                if column in df_gp.columns:
+                    df_gp[column] = df_gp[column].values.astype(float)
+                else:
+                    raise ValueError(f"Column '{column}' not found in the input data.")
+
+        # Prepare the input data for prediction
+        df_gp['ds'] = df_gp.index  # Creating the 'ds' column using the resampled index
+        df_gp = df_gp.rename(columns={"sales": 'y'})  # Renaming the target column to 'y'
+
+        # Make predictions
+        predictions = self.model.predict(df_gp)
+
+        # Get the last few 100 values
+        last_few_values = df_gp.iloc[-100:]
+
+        # Get the corresponding predictions for the last 100 values
+        last_few_predictions = predictions[predictions['ds'].isin(last_few_values.index)]
+
+        # Create the plot
+        plt.figure(figsize=(10, 6))
+        plt.plot(last_few_values.index, last_few_values['y'], label='Actual')
+        plt.plot(last_few_predictions['ds'], last_few_predictions['yhat'], label='Predicted')
         plt.xlabel('Time')
         plt.ylabel('Value')
         plt.title('Time Series Prediction')
         plt.legend()
 
-        
+
+
+
+
+            
         # Create the batch prediction folder if it doesn't exist
         if not os.path.exists('batch_prediction'):
             os.makedirs('batch_prediction')

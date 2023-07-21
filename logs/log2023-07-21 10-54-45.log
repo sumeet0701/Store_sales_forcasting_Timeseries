@@ -1,0 +1,43 @@
+[2023-07-21 10:54:47,728] root - INFO - Training pipleine config: TrainingPipelineConfig(artifact_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact')
+[2023-07-21 10:54:47,746] werkzeug - WARNING -  * Debugger is active!
+[2023-07-21 10:54:47,748] werkzeug - INFO -  * Debugger PIN: 344-037-183
+[2023-07-21 10:54:51,896] werkzeug - INFO - 127.0.0.1 - - [21/Jul/2023 10:54:51] "GET / HTTP/1.1" 200 -
+[2023-07-21 10:55:02,400] root - INFO - Model Name :Prophet
+[2023-07-21 10:55:02,401] root - INFO - Prophet prediction started
+[2023-07-21 10:55:02,401] root - INFO - Columns dropped
+[2023-07-21 10:55:02,505] root - INFO - df copyed
+[2023-07-21 10:55:03,049] root - INFO - unnecessary columns dropped
+[2023-07-21 10:55:03,060] root - INFO - rename done
+[2023-07-21 10:55:03,134] root - INFO - df_gp series created
+[2023-07-21 10:55:03,134] root - INFO - df_gp dataframe created
+[2023-07-21 10:55:03,149] root - INFO - Predictions stated
+[2023-07-21 10:55:03,358] root - INFO - Prediction completed
+[2023-07-21 10:55:03,386] root - INFO -             ds         trend    yhat_lower  ...  multiplicative_terms_lower  multiplicative_terms_upper           yhat
+0   2016-01-01 786985.273201 682301.177468  ...                    0.000000                    0.000000  808447.542071
+1   2016-01-02 787182.790562 855069.621282  ...                    0.000000                    0.000000  985560.119652
+2   2016-01-03 787380.307923 892213.429738  ...                    0.000000                    0.000000 1030626.969330
+3   2016-01-04 787577.825284 672614.658682  ...                    0.000000                    0.000000  810224.102863
+4   2016-01-05 787775.342645 614732.218276  ...                    0.000000                    0.000000  750096.359352
+..         ...           ...           ...  ...                         ...                         ...            ...
+587 2017-08-11 896023.796921 597321.221733  ...                    0.000000                    0.000000  734396.613229
+588 2017-08-12 896271.243706 785095.373383  ...                    0.000000                    0.000000  922972.298925
+589 2017-08-13 896518.690492 843187.007866  ...                    0.000000                    0.000000  980286.951753
+590 2017-08-14 896766.137277 628838.208736  ...                    0.000000                    0.000000  771251.426536
+591 2017-08-15 897013.584062 594253.290141  ...                    0.000000                    0.000000  725727.571901
+
+[592 rows x 25 columns]
+[2023-07-21 10:55:03,386] root - INFO - <class 'pandas.core.frame.DataFrame'>
+[2023-07-21 10:55:03,387] root - INFO - New_dataframe created.
+[2023-07-21 10:55:03,387] root - INFO - date columns is converted into datetime format
+[2023-07-21 10:55:03,387] root - INFO - Converting date columns into index
+[2023-07-21 10:55:03,387] root - INFO - converted date columns into index
+[2023-07-21 10:55:03,387] root - INFO - Updated new df created
+[2023-07-21 10:55:03,430] werkzeug - INFO - 127.0.0.1 - - [21/Jul/2023 10:55:03] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[2023-07-21 10:55:03,779] werkzeug - INFO - 127.0.0.1 - - [21/Jul/2023 10:55:03] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2023-07-21 10:55:03,780] werkzeug - INFO - 127.0.0.1 - - [21/Jul/2023 10:55:03] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2023-07-21 10:55:03,808] werkzeug - INFO - 127.0.0.1 - - [21/Jul/2023 10:55:03] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2023-07-21 10:55:03,992] werkzeug - INFO - 127.0.0.1 - - [21/Jul/2023 10:55:03] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2023-07-21 10:55:57,039] werkzeug - INFO -  * Detected change in 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Prediction\\batch_prediction.py', reloading
+[2023-07-21 10:55:57,040] werkzeug - INFO -  * Detected change in 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Prediction\\batch_prediction.py', reloading
+[2023-07-21 10:55:57,040] werkzeug - INFO -  * Detected change in 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Prediction\\batch_prediction.py', reloading
+[2023-07-21 10:55:57,040] werkzeug - INFO -  * Detected change in 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Prediction\\batch_prediction.py', reloading

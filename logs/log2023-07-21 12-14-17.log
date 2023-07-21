@@ -1,0 +1,17 @@
+[2023-07-21 12:14:19,445] root - INFO - Training pipleine config: TrainingPipelineConfig(artifact_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Sales_Forecasting_Artifact\\Artifact')
+[2023-07-21 12:14:19,461] werkzeug - WARNING -  * Debugger is active!
+[2023-07-21 12:14:19,463] werkzeug - INFO -  * Debugger PIN: 344-037-183
+[2023-07-21 12:14:22,752] werkzeug - INFO - 127.0.0.1 - - [21/Jul/2023 12:14:22] "GET / HTTP/1.1" 200 -
+[2023-07-21 12:14:23,915] werkzeug - INFO - 127.0.0.1 - - [21/Jul/2023 12:14:23] "GET / HTTP/1.1" 200 -
+[2023-07-21 12:14:24,590] werkzeug - INFO - 127.0.0.1 - - [21/Jul/2023 12:14:24] "GET / HTTP/1.1" 200 -
+[2023-07-21 12:14:34,862] root - INFO - Model Name :Prophet
+[2023-07-21 12:14:34,863] root - INFO - Prophet prediction started
+[2023-07-21 12:14:35,679] werkzeug - INFO - 127.0.0.1 - - [21/Jul/2023 12:14:35] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[2023-07-21 12:14:36,028] werkzeug - INFO - 127.0.0.1 - - [21/Jul/2023 12:14:36] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2023-07-21 12:14:36,029] werkzeug - INFO - 127.0.0.1 - - [21/Jul/2023 12:14:36] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2023-07-21 12:14:36,060] werkzeug - INFO - 127.0.0.1 - - [21/Jul/2023 12:14:36] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2023-07-21 12:14:36,239] werkzeug - INFO - 127.0.0.1 - - [21/Jul/2023 12:14:36] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2023-07-21 12:15:59,160] werkzeug - INFO -  * Detected change in 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Prediction\\batch_prediction.py', reloading
+[2023-07-21 12:15:59,160] werkzeug - INFO -  * Detected change in 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Prediction\\batch_prediction.py', reloading
+[2023-07-21 12:15:59,161] werkzeug - INFO -  * Detected change in 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Prediction\\batch_prediction.py', reloading
+[2023-07-21 12:15:59,161] werkzeug - INFO -  * Detected change in 'C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\sales_store\\Store_sales_forcasting_Timeseries\\Prediction\\batch_prediction.py', reloading
